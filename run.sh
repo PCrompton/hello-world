@@ -1,6 +1,7 @@
 #!/bin/bash
 
 addressee='World'
+greeting='Hello'
 
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -17,10 +18,14 @@ while [ $# -gt 0 ]; do
       addressee=$1
       shift
       ;;
+    -c|--christmas)
+      shift
+      greeting='Merry Christmas'
+    ;;
     *)
       break
       ;;
   esac
 done
 
-echo "Hello $addressee!"
+echo "$greeting $addressee!"
