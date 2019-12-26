@@ -6,7 +6,7 @@ greeting='Hello'
 while [ $# -gt 0 ]; do
   case "$1" in
     -h|--help)
-      echo 'Options: [-a|--addressee <text>]'
+      echo 'Options: [-a|--addressee <text>] [-c|--christmas]'
       exit 1
       ;;
     -a|--addressee)
