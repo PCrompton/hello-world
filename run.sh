@@ -1,12 +1,12 @@
 #!/bin/bash
 
-greeting='World'
+addressee='World'
 
 while [ $# -gt 1 ]; do
   case "$1" in
-    -g|--greeting)
+    -a|--addressee)
       shift
-      greeting=$1
+      addressee=$1
       shift
       ;;
     *)
@@ -15,4 +15,4 @@ while [ $# -gt 1 ]; do
   esac
 done
 
-echo "Hello $greeting!"
+echo "Hello $addressee!"
