@@ -1,5 +1,9 @@
 #!/bin/bash
 
+GREETINGS=( "Hello" "Hi" "Howdy" "Ahoy" )
+num_greetings=${#GREETINGS[@]}
+random_index=$(./random.sh --min 0 --max $(( $num_greetings - 1 )) )
+
 NEW_YEAR_GREETING='Happy New Year'
 VALINTINES_GREETING='Happy Valintines Day'
 INDEPENDANCE_DAY_GREETING='Happy Independance Day'
@@ -26,7 +30,7 @@ get_greeting () {
       greeting=$CHRISTMAS_GREETING
       ;;
     *)
-      greeting='Hello'
+      greeting=${GREETINGS[$random_index]}
       ;;
   esac
   echo $greeting
