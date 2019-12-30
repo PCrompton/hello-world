@@ -2,5 +2,5 @@
 
 ## Run
 
-From the project root directory `./run.sh [-a|--addressee <text>] [-c|--christmas]`
+From the project root directory `./run.sh [-a|--addressee <text>] [-m|--month <int>]`
 
